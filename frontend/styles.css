@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; color: #1f2937; background: #f8fafc; }
+
+header { padding: 16px 24px; background: #0f766e; color: #fff; }
+header h1 { margin: 0; font-size: 22px; }
+header .subtitle { margin: 6px 0 0; opacity: 0.9; font-size: 14px; }
+
+.container { display: flex; gap: 16px; padding: 16px; align-items: flex-start; }
+.panel { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.controls { width: 360px; }
+.canvas-panel { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 12px; }
+
+.field { margin-bottom: 12px; display: flex; flex-direction: column; }
+label { font-weight: 600; margin-bottom: 6px; }
+input[type=file], select { padding: 8px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; }
+
+.landmarking { margin-top: 12px; border-top: 1px solid #e5e7eb; padding-top: 10px; }
+.landmark-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+#lmList { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: #374151; }
+#lmStatus { font-size: 12px; color: #444; margin-bottom: 6px; }
+
+.actions { display: flex; gap: 10px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+button { background: #0f766e; color: #fff; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+button:hover { filter: brightness(1.05); }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+button.secondary { background: #6b7280; }
+
+#canvas { border: 1px dashed #94a3b8; border-radius: 8px; background: #f8fafc; max-width: 100%; height: auto; }
+#hint { margin-top: 6px; font-size: 12px; color: #556; }
+
+.results { margin-top: 12px; width: 100%; max-width: 900px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; color: #111827; }
+.results.hidden { display: none; }
+.results h3 { margin: 0 0 8px; }
+.results pre { background: #fff; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px; overflow: auto; }
+
+.records { margin-top: 14px; }
+.records-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+#recordsList { margin: 0; padding: 0; list-style: none; }
+#recordsList li { display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 1px solid #e5e7eb; padding: 8px; border-radius: 6px; margin-bottom: 6px; background: #fff; }
+#recordsList .meta { font-size: 12px; color: #374151; }
+#recordsList .actions { margin: 0; }
+
+footer { padding: 12px 16px; color: #6b7280; font-size: 12px; }

@@ -1,0 +1,18 @@
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+pydantic==2.8.2
+python-multipart==0.0.9
+Pillow==10.4.0
+numpy==1.26.4
+opencv-python==4.10.0.84
+python-dotenv==1.0.1
+requests==2.32.3
+onnxruntime>=1.19.2
+rembg>=2.0.0
+
+# SSL Training Dependencies
+torch>=1.9.0
+torchvision>=0.10.0
+tqdm>=4.62.3
+matplotlib>=3.4.3
+seaborn>=0.11.2

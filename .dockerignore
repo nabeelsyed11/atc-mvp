@@ -1,0 +1,19 @@
+# Ignore local dev artifacts
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git
+.git/
+.gitignore
+
+# OS/files
+.DS_Store
+Thumbs.db
+
+# Local runtime data
+.env
+.env.*
+data/

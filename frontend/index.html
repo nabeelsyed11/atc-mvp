@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATC MVP</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Animal Type Classification (ATC) MVP</h1>
+    <p class="subtitle">Image-based scoring for cattle and buffaloes</p>
+  </header>
+
+  <main class="container">
+    <section class="panel controls">
+      <div class="field">
+        <label for="species">Species</label>
+        <select id="species">
+          <option value="cattle">Cattle</option>
+          <option value="buffalo">Buffalo</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label><input type="checkbox" id="autoSpecies" /> Auto-detect species (ML)</label>
+      </div>
+
+      <div class="field">
+        <label for="imageInput">Animal Image</label>
+        <input type="file" id="imageInput" accept="image/*" />
+      </div>
+
+      <div class="field">
+        <label><input type="checkbox" id="autoDetect" /> Auto silhouette (no landmarks)</label>
+      </div>
+
+      <div class="landmarking">
+        <div class="landmark-header">
+          <strong>Guided Landmarks</strong>
+          <button id="startLM">Start Landmarking</button>
+          <button id="undoLM">Undo</button>
+          <button id="clearLM">Clear</button>
+        </div>
+        <div id="lmStatus">Click "Start Landmarking" to begin</div>
+        <ol id="lmList"></ol>
+      </div>
+
+      <div class="actions">
+        <button id="analyzeBtn">Compute & Save</button>
+        <a id="exportLink" href="/api/export" target="_blank">Export CSV</a>
+      </div>
+
+      <div class="records">
+        <div class="records-header">
+          <strong>Recent Records</strong>
+          <button id="refreshRecords">Refresh</button>
+        </div>
+        <ul id="recordsList"></ul>
+      </div>
+    </section>
+
+    <section class="panel canvas-panel">
+      <canvas id="canvas" width="900" height="600"></canvas>
+      <div id="hint">Tip: Zoom the page if needed; click precisely on the requested landmark.</div>
+      <div id="results" class="results hidden"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>MVP for demonstration. Targets are adjustable in backend/scoring.py</small>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
