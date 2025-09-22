@@ -262,4 +262,4 @@ atc-mvp/
   3) Restart the server. The response will include `detected_species`, `species_confidence`, and `species_method` (onnx/heuristic).
 
 ## License
-For evaluation and internal prototyping only.
+MIT
